@@ -1,0 +1,22 @@
+shell  --> comands 
+
+ * to create a new db --> use db_name
+ * to show databases --> show dbs
+ * to create a new collection --> db.createCollection(collection_name)
+ * to see all the documents inside the collection --> db.collectionName.find()
+ * to insert a single document --> db.collectionName.insertOne(Object to insert)
+ * to insert a multiple records at a time --> db.collectionName.insertMany(array of records)
+ * to find the first document --> db.collectionName.findOne()
+ * to find the specific key  --> db.collectionName.find(key: value)
+ * to get the specific limit records --> db.collectionName.find().limit(value)
+ * to filter and get the records   --> db.collectionName.find({}.{name:1,phoneNumber:1})   
+     // first object will have the filteration criteria like the where clause in sql
+     // in the second object we will put the keys that we need 
+ * using th toArray method which allows us to use all the javascript array methods
+     db.collectionName.find({}.{name:1,phoneNumber:1}).toArray()
+
+
+* using the sort method 
+    sort(key: flag)  
+       flag--> 1 sorting in increasing order 
+       flag --> -1 means sorting in descending order
